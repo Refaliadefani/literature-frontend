@@ -1,0 +1,10 @@
+replicaCount: 1
+
+image:
+  repository: refaliadefani/literature-app
+  tag: "latest"
+
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 3000

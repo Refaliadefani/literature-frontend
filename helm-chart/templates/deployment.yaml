@@ -1,16 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: literature-app
+  name: literature-app-{{ .Values.podLabels.color }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: literature-app
+      color: {{ .Values.podLabels.color }} 
   template:
     metadata:
       labels:
         app: literature-app
+        color: {{ .Values.podLabels.color }} 
     spec:
       containers:
         - name: literature-app

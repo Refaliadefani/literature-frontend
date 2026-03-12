@@ -1,5 +1,8 @@
 replicaCount: 1
 
+podLabels:
+  color: blue 
+
 image:
   repository: refaliadefani/literature-app
   tag: "latest"

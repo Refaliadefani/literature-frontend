@@ -22,7 +22,7 @@ const Landing = () => {
         <Col md={5}>
           <h1 className="tnr" style={{ fontFamily: 'Times New Roman' }}>
             <strong>
-              source <i>of</i> intelligence
+              source <i>of</i> Green intelligence
             </strong>
           </h1>
           <p>Sign-up and recieve unlimited access to all</p>

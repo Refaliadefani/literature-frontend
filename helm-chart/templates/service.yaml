@@ -4,9 +4,7 @@ metadata:
   name: literature-app-service
   namespace: jenkins
   annotations:
-    # 1. Biar Helm gak hapus service ini pas uninstall warna lama
     "helm.sh/resource-policy": keep
-    # 2. & 3. Trik biar Helm Blue bisa "ngerebut" hak asuh dari Green tanpa Error
     "meta.helm.sh/release-name": {{ .Release.Name | quote }}
     "meta.helm.sh/release-namespace": {{ .Release.Namespace | quote }}
 spec:
@@ -16,4 +14,4 @@ spec:
       targetPort: {{ .Values.service.targetPort }}
   selector:
     app: literature-app
-    # KOSONGIN COLOR: Biar Jenkins yang nge-patch secara dinamis
+    # KOSONGIN COLOR: Biar Jenkins yang nge-patch
